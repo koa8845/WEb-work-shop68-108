@@ -3,157 +3,359 @@
   margin: 0;
   padding: 0;
 }
+
 body {
-  font-family: "Kodchasan", sans-serif;
-  background-color: rgb(165, 242, 245);
-  color: darkblue;
+  font-family: "Kanit", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(247, 210, 162);
+  color: rgb(29, 25, 25);
 
   line-height: 1.6;
 }
 
 .container {
   /* border: 1px solid red;
-  padding: 15px;
-  margin: 15px; */
+    padding: 15px;
+    margin: 15px; */
 }
-/* =================== header ================ */
+
+/* ====================
+         Header 
+=======================*/
 .site-header {
-  /* border: 1px solid rgb(0, 255, 179);
-  padding: 15px;
-  margin: 15px; */
-  background: linear-gradient(rgb(46, 113, 240) rgb(71, 132, 247)
-  )
+  /* border: 1px solid rgb(25, 0, 255);
+    padding: 15px;
+    margin: 15px; */
+
+  background: linear-gradient(90deg, rgb(251, 151, 1), rgb(179, 0, 0));
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 20px;
 }
+
 .brand {
-  /* border: 1px solid rgb(132, 0, 255);
-  padding: 15px;
-  margin: 15px; */
+  /* border: 1px solid rgb(255, 0, 208);
+    padding: 15px;
+    margin: 15px; */
+
   display: flex;
   align-items: center;
   gap: 15px;
 
-  color: aliceblue;
+  color: white;
 }
+
 .brand-icon {
-  background-color: darkcyan;
+  background-color: aliceblue;
+
   width: 60px;
   height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 50%;
-  border: 5px solid pink;
-display: flex;
-justify-content: center;
-align-items: center;
+  border: 5px solid rgb(238, 2, 108);
+
   font-size: 35px;
 }
 
 .brand-text h2 {
-  font-size: 26p;
+  font-size: 26px;
 }
 .brand-text p {
-  font-size: 14p;
+  font-size: 14px;
   opacity: 0.85;
 }
 
 .main-nav {
-  /* border: 1px solid rgb(255, 61, 223);
-  padding: 15px;
-  margin: 15px; */
-
-
+  /* border: 1px solid rgb(255, 0, 208);
+    padding: 15px;
+    margin: 15px; */
 }
 
 .nav-list {
-  list-style: none;
+  list-style-type: none;
+
   display: flex;
-  gap: 15px;
   align-items: center;
+  gap: 15px;
 }
+
 .nav-list a {
-  color: aliceblue;
-  text-decoration: none; 
+  color: white;
+  text-decoration: none;
+
   padding: 12px 16px;
   border-radius: 8px;
   transition: all 1s;
 }
+
 .nav-list a:hover {
- background-color: aqua;
+  background-color: rgba(240, 248, 255, 0.606);
 }
 
-/* ============= main ======== */
+/* ====================
+         Main-Layout 
+=======================*/
 .main-layout {
-  /* border: 1px solid rgb(0, 38, 255);
-  padding: 15px;
-  margin: 15px; */
-  display: grid;
-  grid-template-columns: 1fr 390px;
+  /* border: 1px solid rgb(25, 0, 255);;
+    padding: 15px;
+    margin: 15px; */
 
   padding: 20px 22px 0px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 390px;
+  /* grid-template-columns: 70% 30%; */
 }
 
+/* ======== Left-content ======== */
+
 .left-content {
-  border: 1px solid rgb(250, 121, 1);
-  padding: 15px;
-  margin: 15px;
+  /* border: 1px solid rgb(227, 3, 190);;
+    padding: 15px;
+    margin: 15px; */
+
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
-/* hero*/
+
+/* hero */
 .hero {
-  /* border: 1px solid rgb(21, 5, 250);
-  padding: 15px;
-  margin: 15px; */
+  /* border: 1px solid rgb(25, 3, 227);;
+    padding: 15px;
+    margin: 15px; */
+
   display: grid;
   grid-template-columns: 1.5fr 0.8fr;
   align-items: center;
   justify-content: center;
-background: linear-gradient(100deg, white,rgb(36, 186, 245));
-border-radius: 12px;
-padding: 24px 36px;
-box-shadow: 0 4px 12px gray;
-min-height: 185px;
+
+  background: linear-gradient(100deg, rgb(246, 244, 244), rgb(249, 199, 165));
+
+  border-radius: 12px;
+  padding: 24px 36px;
+  box-shadow: 0 4px 12px rgba(93, 93, 93, 0.462);
+
+  min-height: 185px;
 }
 
-.hero-text h1{
-font-size: 36px;
-color: blue;
+.hero-text h1 {
+  font-size: 36px;
+  color: rgb(10, 63, 133);
 }
-.hero-text p{
-font-size: 26px;
-color: blue;
-font-weight: 700;
+
+.hero-text p {
+  font-size: 21px;
+  color: rgb(16, 104, 163);
+  font-weight: 600;
 }
+
 .hero-photo img {
-  border: 3px solid blue;
   width: 400px;
   height: 200px;
-  /* object-fit: contain; */
+  border: 3px solid rgb(15, 94, 184);
+  border-radius: 20px;
 
+  /* object-fit: contain; */
   /* object-fit: fill; */
   object-fit: cover;
-  border-radius: 20px;
+  /* 
+    object-fit: contain ➡️เห็นภาพครบ รักษาสัดส่วน (อาจมีขอบว่าง)
+    object-fit: fill ➡️ยืดภาพให้เต็มกล่อง ภาพอาจบิด (สัดส่วนเพี้ยน)
+    object-fit: cover ➡️ครอปภาพให้เต็มกล่อง รักษาสัดส่วน บางส่วนของภาพจะถูกตัดออก
+    */
 }
-/*link examle*/
+
+/* ===========link examle */
 .card {
-  border: 1px solid rgb(76, 1, 250);
+  /* border: 1px solid rgb(143, 143, 143);
   padding: 15px;
-  margin: 15px;
+  margin: 15px; */
+
+  background-color: white;
+
+  border-radius: 12px;
+  padding: 24px 36px;
+  box-shadow: 0 4px 12px rgba(212, 212, 212, 0.462);
 }
 
-/*image examle*/
+.card-header-title {
+  /* background-color: rgb(250, 174, 174); */
 
+  color: rgb(10, 63, 133);
+
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.card-body-grid {
+  /* background-color: bisque; */
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 15px;
+}
+/* panelด้านซ้าย */
+.result-panel {
+  border: 1px solid rgb(231, 0, 38);
+  border-radius: 10px;
+  /* padding: 10px; */
+  overflow: hidden;
+}
+.result-panel-title {
+  background-color: rgb(255, 205, 171);
+  padding: 6px 15px;
+}
+.result-panel-body {
+  padding: 6px 15px;
+}
+.result-panel-body a {
+  display: block;
+  color: blue;
+}
+
+.result-panel-body a:hover {
+  color: #ef0000;
+  text-decoration: none;
+}
+.mail-icon {
+  background-color: blue;
+  padding: 2px;
+  border-radius: 5px;
+
+  text-decoration: none;
+}
+
+.back-button {
+  border: 2px solid blue;
+  border-radius: 5px;
+  padding: 4px 15px;
+  margin-top: 10px;
+
+  text-decoration: none;
+
+  display: inline-block !important;
+}
+/* panelด้านขวา */
+
+.code-panel {
+  border: 1px solid rgb(231, 0, 38);
+  border-radius: 10px;
+  /* padding: 10px; */
+  overflow: hidden;
+  background-color: black;
+}
+.code-panel-body {
+  background-color: black;
+  min-height: 145px;
+
+  font-family: monospace;
+  font-size: 15px;
+}
+.code-list {
+  color: white;
+  padding: 16px 50px;
+}
+.code-list li {
+  padding: 0px 20px;
+}
+.tag {
+  color: red;
+}
+.attr {
+  color: greenyellow;
+}
+.values {
+  color: green;
+}
+
+/* image examle */
+/* ด้านซ้าย */
+.result-panel-body-3g {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 20px;
+}
+figcaption {
+  font-size: 10px;
+  text-align: center;
+}
+
+/* ======== Right Sidebar ======== */
 .right-sidebar {
-  border: 1px solid rgb(250, 121, 1);
-  padding: 15px;
-  margin: 15px;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
-/* ============= tip-box ============ */
+
+.sidebar-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.target-icon {
+  font-size: 26px;
+}
+
+.sidebar-header h3 {
+  color: rgb(10, 63, 133);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.objective-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.objective-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.badge-num {
+  background-color: #1a56db;
+  color: #ffffff;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+/* ====================
+         Tip-Box 
+=======================*/
 .tip-box {
-  border: 1px solid rgb(255, 0, 234);
+  border: 1px solid rgb(25, 0, 255);
   padding: 15px;
   margin: 15px;
 }

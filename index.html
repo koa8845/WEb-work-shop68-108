@@ -4,50 +4,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="เว็บไซต์สอนใช้งาน html css และ workshop">
-    <title>Web Workshop : 684259052</title>
-    
+    <title>Workshop: HTML Heading</title>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 50px;
+        * {
+            box-sizing: border-box;
+            margin: 0;
             padding: 0;
-            background-color: rgb(188, 237, 244);
-            
-            line-height: 1.5;
         }
-        h1{
-            color :darkblue ;
-        }
-        h2 {
-            color:rgb(0, 183, 255) ;
-        }
-        .green-text{
-            color :green;
-        }
-        
-        pre {
-            background-color: rgb(251, 251, 251);
-            border-left: 4px solid rgb(243, 121, 0);
-            padding: 10px 10px 10px 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            white-space: pre-wrap;
-        }
-        a{text-decoration: none;}
-        a:hover{text-decoration:  underline;
-        color:  red;}
 
-        .text-center{
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ebf8ff;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(to right, #014ff8, #15bafc);
             text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 90%;
+        }
+
+        .hero {
+            padding: 40px 20px 20px 20px;
+        }
+
+        .hero h1 {
+            color: #0707ff;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #555557;
+            font-size: 18px;
+        }
+
+        .text-color {
+            color: rgb(66, 66, 248);
+            font-weight: bold;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(61, 57, 57, 0.15);
+            margin-bottom: 25px;
+            overflow: hidden;
+            border: 1px solid #cce7ff;
+        }
+
+        .card-header {
+            background-color: #dbeafe;
+            color: #1e3a8a;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid #bfdbfe;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-margin-bt {
+            margin-bottom: 12px;
+        }
+
+        .label {
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .h1-label { background-color: #ef4444; }
+        .h2-label { background-color: #3b82f6; }
+        .h3-label { background-color: #10b981; }
+        .h4-label { background-color: #ec4899; }
+        .h5-label { background-color: #f59e0b; }
+        .h6-label { background-color: #8b5cf6; }
+
+        pre {
+            background-color: #1e1e1e;
+            padding: 15px;
+            font-size: 15px;
+            color: #dcdcdc;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        .text-shade {
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            border: 1px dashed #cbd5e1;
+        }
+
+        .text-shade h1 { color: #1e3a8a; font-size: 32px; }
+        .text-shade h2 { color: #2563eb; font-size: 26px; }
+        .text-shade h3 { color: #059669; font-size: 22px; }
+        .text-shade h4 { color: #db2777; font-size: 18px; }
+        .text-shade h5 { color: #d97706; font-size: 15px; }
+        .text-shade h6 { color: #7c3aed; font-size: 13px; }
+
+        .note {
+            padding: 12px 15px;
+            background-color: #fef08a;
+            border-radius: 6px;
+            color: #713f12;
+            font-weight: 500;
+            border-left: 4px solid #eab308;
+            margin-top: 15px;
+        }
+
+        .tip-box {
+            background-color: #ffedd5;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            border: 1px solid #fed7aa;
+            color: #9a3412;
+        }
+
+        .tip-box p + p {
+            margin-top: 10px;
         }
     </style>
 </head>
 
 <body>
+
+    <!-- Header Section -->
+    <section class="header">
+        <h1>เรียนรู้เว็บเบื้องต้น</h1>
+        <a href="index.html">Home</a>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Hero Title -->
+        <div class="hero">
+            <h1>Workshop: HTML Heading</h1>
+            <p>ฝึกใช้แท็ก <span class="text-color">&lt;h1&gt;</span> ถึง <span class="text-color">&lt;h6&gt;</span> และการจัดระเบียบเนื้อหาด้วยหัวข้อ</p>
+        </div>
+
+        <!-- Card 1: Meaning of Headings -->
+        <div class="card">
+            <div class="card-header">
+                1. ความหมายของ Headings (H1–H6)
+            </div>
+            <div class="card-body">
+                <p class="card-margin-bt">HTML มีแท็กสำหรับกำหนดหัวข้อทั้งหมด 6 ระดับ โดยมีลำดับความสำคัญและความหมายดังนี้ครับ:</p>
+                
+                <p class="card-margin-bt"><span class="label h1-label">H1</span> – หัวข้อใหญ่ที่สุด ใช้สำหรับชื่อเรื่องหลักหรือหัวข้อหน้าเว็บ (ควรมีเพียง 1 อันต่อหน้า)</p>
+                <p class="card-margin-bt"><span class="label h2-label">H2</span> – หัวข้อรอง ใช้แบ่ง Section สำคัญของเนื้อหา</p>
+                <p class="card-margin-bt"><span class="label h3-label">H3</span> – หัวข้อย่อยลงมาจาก H2</p>
+                <p class="card-margin-bt"><span class="label h4-label">H4</span> – หัวข้อย่อยระดับที่ 4</p>
+                <p class="card-margin-bt"><span class="label h5-label">H5</span> – หัวข้อย่อยระดับที่ 5 (ใช้งานน้อย)</p>
+                <p class="card-margin-bt"><span class="label h6-label">H6</span> – หัวข้อระดับเล็กที่สุด</p>
+            
+                <div class="note">
+                    💡 <strong>SEO Tip:</strong> การเรียงลำดับหัวข้อจาก H1 ไป H6 ให้ถูกต้องตามโครงสร้าง จะช่วยให้โปรแกรมค้นหา (Search Engine) เข้าใจเนื้อหาเว็บไซต์ได้ดีขึ้น
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Code Example & Preview -->
+        <div class="card">
+            <div class="card-header">
+                2. ตัวอย่างการใช้งานจริง (H1–H6)
+            </div>
+            <div class="card-body">
+                <!-- โค้ดตัวอย่าง -->
+                <pre><code>&lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;h2&gt;HTML Basics&lt;/h2&gt;
+&lt;h3&gt;What is HTML?&lt;/h3&gt;
+&lt;h4&gt;HTML Syntax&lt;/h4&gt;
+&lt;h5&gt;Example Code&lt;/h5&gt;
+&lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;</code></pre>
+                
+                <!-- ผลลัพธ์การแสดงผล -->
+                <div class="text-shade">
+                    <h1>H1: Welcome to My Website</h1>
+                    <h2>H2: HTML Basics</h2>
+                    <h3>H3: What is HTML?</h3>
+                    <h4>H4: HTML Syntax</h4>
+                    <h5>H5: Example Code</h5>
+                    <h6>H6: Note about heading size</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Tips & Notes -->
+        <div class="tip-box">
+            <p><b>Tip:</b> คุณสามารถใช้สกุลไฟล์เป็น <code>.htm</code> หรือ <code>.html</code> ก็ได้ ไม่มีผลต่อการทำงาน เลือกใช้ตามความสะดวกได้เลยครับ</p>
+            <p><strong>Note:</strong> แท็ก HTML บางตัวไม่มีเนื้อหาภายใน (เช่น แท็ก <code>&lt;br&gt;</code>) เราจะเรียกแท็กเหล่านี้ว่า <em>Empty Elements</em> ซึ่งจะไม่จำเป็นต้องมีแท็กปิดครับ</p>
+        </div>
+
+    </div>
+
+    <body>
     <h1 ="top">HTML tutorial</h1>
     <p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
     <h2 \\style="color: mediumvioletred;"\\>Topics</h2>
@@ -62,337 +235,10 @@
     <li><a href="#Images">Adding Images</a></li>
     <li><a href="#Tables">Creating Tables</a></li>
     <li><a href="#Forms">HTML Forms</a></li>
-    
     <li><a href="#Semantic">Semantic HTML</a></li>
     <li><a href="#Workshop">My Workshop</a></li>
+    <li><a href="#Pets01/index.html">โปรเจ็คสัตว์เลี้ยง</a></li>
 </Ul>
 <hr>
-
-<!-- introduction to html -->
- 
-    <h2 id="intro">Introduction to HTML</h2>
-    <pre> 
- - HTML stands for Hyper Text Markup Language
- - HTML is the standard markup language for creating Web pages
- - HTML describes the structure of a Web page
- - HTML consists of a series of elements
- - HTML elements tell the browser how to display the content
- - HTML elements are represented by tags
- - HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
- - Browsers do not display the HTML tags, but use them to render the content of the page
- - HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior andcontent of web pages
- - HTML is not a programming language, but a markup language</pre>
-
- <a href="#top">back to Top</a>
-
-<!-- HTML Document Structure
- -->
-<h2 id="doc">HTML Document Structure
-</h2>
-    <pre> คำอธิบาย:
-&lt;!DOCTYPE html&gt;: ระบุว่าเป็นเอกสาร HTML5
-&lt;html&gt;: เป็นรากของเอกสาร HTML ทั้งหมด
-&lt;head&gt;: ส่วนที่ใช้เก็บข้อมูลเมตา เช่น &lt;title&gt; ชื่อหน้าเว็บ
-&lt;body&gt;: ส่วนที่จะแสดงผลบนหน้าเว็บ
-องค์ประกอบสำคัญของ HTML
-แท็ก (Tags):
-- แท็กเริ่มต้น (Opening Tag): เช่น &lt;h1&gt;
-- แท็กปิด (Closing Tag): เช่น &lt;/h1&gt;
-แอตทริบิวต์ (Attributes): คุณสมบัติของแท็ก
-- ใช้เพื่อกำหนดคุณสมบัติเพิ่มเติม เช่น href, src, width, height
-ตัวอย่าง: &lt;h1&gt;Hello, World!&lt;/h1&gt;
-&lt;img src="image.jpg" alt="A description of the image"&gt;
-
-</pre>
-
- <a href="#top">back to Top</a>
-
-<!-- Heading -->
-<h2 id="heading">Heading</h2>
-
-
-<a href="W03-01-heading.html">workshop</a>
-<a href="02-heading-51.html">  |  workshop</a>
-
-<pre> 
-    HTML headings are defined with the &lt;h1 to h6&gt; tags...
-    - &lt;h1&gt;: Heading 1
-    - &lt;h2&gt;: Heading 2
-    - &lt;h3&gt;: Heading 3
-    - &lt;h4&gt;: Heading 4
-    - &lt;h5&gt;: Heading 5
-    - &lt;h6&gt;: Heading 6
-    
-</pre>
-
-
- <a href="#top">back to Top</a>
-
-<!-- Paragraph -->
-<h2 id="Paragraph">Paragraph</h2>
-
-    <pre> 
-
-HTML paragraphs are defined with the <p> tag...
-- &lt;p
-</pre>
-<p><a href="Work-Paragraph.html">workshop</a></p>
-
- <a href="#top">back to Top</a>
-
-
-<!-- Text Formatting
- -->
-<h2 id="Formatting">Text Formatting
-</h2>
-    <pre> Text Formatting
-
-HTML provides various elements to format text...
-- &lt;h1&gt; to &lt;h6&gt;: Headings
-- &lt;p&gt;: Paragraph
-- &lt;pre&gt;: Preformatted text
-- &lt;b&gt;: Bold text
-- &lt;strong&gt;: Important text
-- &lt;i&gt;: Italic text
-- &lt;em&gt;: Emphasized text
-- &lt;u&gt;: Underline text
-- &lt;ins&gt;: Inserted text
-- &lt;del&gt;: Deleted text
-- &lt;s&gt;: Strikethrough text
-- &lt;strike&gt;: Strikethrough text
-- &lt;small&gt;: Smaller text
-- &lt;big&gt;: Big text
-- &lt;mark&gt;: Marked/highlighted text
-- &lt;sub&gt;: Subscript text
-- &lt;sup&gt;: Superscript text
-- &lt;blockquote&gt;: Block quotation
-- &lt;q&gt;: Inline quotation
-- &lt;code&gt;: Code snippet
-
-</pre>
-<p><a href="Work-Formatting.html">workshop</a></p>
- <a href="#top">back to Top</a>
-
-<!-- Creating Links
- -->
-<h2 id="Links">Creating Links
-</h2>
-    <pre> 
-HTML links are defined with the <a> tag...
-- &lt;a href="url" target=""&gt;Link text&lt;/a&gt;
-- The href attribute specifies the URL of the page the link goes to
-- The target attribute specifies where to open the linked document
-- _self: Open the linked document in the same window/tab
-- _blank: Open the linked document in a new window/tab
-- _parent: Open the linked document in the parent frame
-- _top: Open the linked document in the full body of the window
-- The link text is the visible part of the link
-- Anchor links:
-- Use the href attribute with the # symbol to link to a specific part of the page
-- Use the id attribute to define the section to link to
-- Example: &lt;a href="#section"&gt;Go to Section&lt;/a&gt;
-- Example: &lt;h3 id="section"&gt;This is the Section&lt;/h3&gt;
-- Email links:
-- Use the mailto: prefix to create an email link
-- Example: &lt;a href="mailto:support@example.com">email us&lt;/a&gt;
-- Download links:
-- Use the download attribute to create a download link
-- Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;
-
-</pre>
-<p><a href="Work-Links.html">workshop</a></p>
-
- <a href="#top">back to Top</a>
-
-<!-- Lists (Ordered and Unordered)
- -->
-<h2 id="Lists">Lists (Ordered and Unordered)
-</h2>
-    <pre> 
-HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...
-- &lt;ul&gt;: Unordered list
-- &lt;ol&gt;: Ordered list
-- &lt;li&gt;: List item
-- Unordered list:
-- Use the &lt;ul&gt; tag to create an unordered list
-- Use the &lt;li&gt; tag to create each list item
-- Example:
-&lt;ul&gt;
-&lt;li&gt;Coffee&lt;/li&gt;
-&lt;li&gt;Tea&lt;/li&gt;
-&lt;li&gt;Milk&lt;/li&gt;
-&lt;/ul&gt;
-- Ordered list:
-- Use the &lt;ol&gt; tag to create an ordered list
-- Use the &lt;li&gt; tag to create each list item
-- Example:
-&lt;ol&gt;
-&lt;li&gt;Coffee&lt;/li&gt;
-&lt;li&gt;Tea&lt;/li&gt;
-&lt;li&gt;Milk&lt;/li&gt;
-&lt;/ol&gt;
-- List style types:
-- Use the list-style-type property to define the style of the list
-- Example: &lt;ul style="list-style-type: disc;"&gt;
-- Example: &lt;ul style="list-style-type: circle;"&gt;
-- Example: &lt;ul style="list-style-type: square;"&gt;
-- Example: &lt;ul style="list-style-type: none;"&gt;
-- Example: &lt;ol type="1"&gt;
-- Example: &lt;ol type="A"&gt;
-- Example: &lt;ol type="a"&gt;
-- Example: &lt;ol type="I"&gt;
-- Example: &lt;ol type="i"&gt;
-- Example: &lt;ol type="A" start="3"&gt;
-- Example: &lt;ol type="1" start="3"&gt;
-- Example: &lt;ol style="list-style-type: decimal;"&gt;
-- Example: &lt;ol style="list-style-type: upper-alpha;"&gt;
-- Example: &lt;ol style="list-style-type: lower-alpha;"&gt;
-- Example: &lt;ol style="list-style-type: upper-roman;"&gt;
-- Example: &lt;ol style="list-style-type: lower-roman;"&gt;
-
-</pre>
-<p><a href="Work-Lists.html">workshop</a></p>
- <a href="#top">back to Top</a>
-
-<!-- Adding Images
- -->
-<h2 id="Images">Adding Images
-</h2>
-    <pre> 
-HTML images are defined with the &lt;img&gt; tag...
-- &lt;img src="url" alt="description"&gt;
-- The src attribute specifies the URL of the image
-- The alt attribute provides a description of the image
-- The width and height attributes provide the size of the image
-- Example: &lt;img src="image.jpg" alt="description of image"&gt;
-- Example: &lt;img src="image.jpg" alt="description of image" width="300" height="200"&gt;
-- Image alignment:
-- Use the align attribute to specify the alignment of an image
-- Example: &lt;img src="image.jpg" alt="description" align="left"&gt;
-- Example: &lt;img src="image.jpg" alt="description" align="right"&gt;
-- Image border:
-- Use the border attribute to add a border around an image
-- Example: &lt;img src="image.jpg" alt="description" border="1"&gt;
-- Image link:
-- Use the &lt;a&gt; tag to create a link around an image
-- Example: &lt;a href="url"&gt;&lt;img src="image.jpg" alt="description"&gt;&lt;/a&gt;
-- Image gallery:
-- Use the &lt;div&gt; tag to create an image gallery
-- Use the &lt;img&gt; tag to display each image
-- Example:
-&lt;div class="gallery"&gt;
-&lt;img src="image1.jpg" alt="Image 1"&gt;
-&lt;img src="image2.jpg" alt="Image 2"&gt;
-&lt;img src="image3.jpg" alt="Image 3"&gt;
-&lt;/div&gt;
-- flex box:
-- Use the display: flex; property to create a flex container
-- Use the gap property to create space between flex items
-- Example:
-.gallery {
-display: flex;
-gap: 10px;
-}
-.gallery img {
-width: 150px;
-height: 150px;
-object-fit: cover;
-}
-
-</pre>
-<p><a href="Work-Images.html">workshop</a></p>
-
- <a href="#top">back to Top</a>
-
-<!-- Creating Tables
- -->
-<h2 id="Tables">Creating Tables
-</h2>
-    <pre> Workshop 1
-Workshop 2
-HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...
-- &lt;table&gt;: Table
-- &lt;tr&gt;: Table row
-- &lt;th&gt;: Table header
-- &lt;td&gt;: Table data/cell
-
-</pre>
-
- <a href="#top">back to Top</a>
-
-<!-- HTML Forms
- -->
-<h2 id="Forms">HTML Forms
-</h2>
-    <pre> HTML forms are defined with the &lt;form&gt; tag...
-หัวข ้อเกี่ยวกับฟอร์ม
-1. โครงสร้างพื้นฐานของฟอร์ม
-- &lt;form>: ใชเ้ป็นตวัครอบขอ้มูลในฟอรม์
-- action และ method (GET/POST): การก าหนดปลายทางและวธิสี ง่ ขอ้มลู
-2. ชนิดของอินพุต (Input Types)
-- &lt;input>: ชนดิ ตา่ ง ๆ เชน่ text, password, email, number,
-radio, checkbox, date, file
-- &lt;textarea>: ชอ่ งขอ้ความขนาดใหญ่
-- &lt;select> และ &lt;option>: เมนูแบบเลื่อนลง
-- &lt;datalist>: รายการตัวเลือกที่ก าหนดไว ้ล่วงหน้า
-- &lt;optgroup>: กลุ่มตัวเลือก
-- &lt;fieldset> และ &lt;legend>: กลุ่มข ้อมูลที่เกี่ยวข ้อง
-3. ปุ่ มในฟอร์ม
-- &lt;button>: ปุ่มทั่วไป
-- &lt;input type="submit"> และ &lt;input type="reset">: ป่มุ สง่ และลา้งขอ้ มลู
-- &lt;input type="button">: ปุ่ มทั่วไป
-- &lt;input type="image">: ปุ่ มรูปภาพ
-- &lt;input type="file">: ปุ่ มอัพโหลดไฟล์
-4. การจัดการป้ายก ากับ (Labels)
-- &lt;label>: เพอื่ เชอื่ มกับ &lt;input> (ชว่ ยเพมิ่ การเขา้ถงึ)
-- for: ระบุ id ของอินพุตที่เกี่ยวข ้อง
-5. การตรวจสอบข ้อมูล (Validation)
-- คณุ สมบัติเชน่ required, min, max, pattern
-- การใช ้JavaScript เพื่อท าการตรวจสอบ
-6. ฟอร์มแบบสมัยใหม่ (HTML5)
-- placeholder: ตัวอย่างขอ้ความในชอ่ งอนิ พุต
-- autofocus: ให ้ฟอร์มเริ่มต ้นโฟกัส
-7. การสง่ ฟอรม์ (Form Submission)
-- การสง่ ขอ้มลู ไปยังเซริฟ์ เวอร์
-- การใช ้JavaScript (เชน่ onsubmit)
-
-</pre>
-
- <a href="#top">back to Top</a>
-
-</pre>
-
- <a href="#top">back to Top</a>
-
-<!-- Semantic HTML-->
-<h2 id="Semantic">Semantic HTML
-</h2>
-    <pre> Semantic HTML elements clearly define the content of a web page...
-- &lt;header&gt;: Defines a header for a document or section
-- &lt;nav&gt;: Defines navigation links
-- &lt;section&gt;: Defines a section in a document
-- &lt;article&gt;: Defines an article
-- &lt;aside&gt;: Defines content aside from the page content
-- &lt;footer&gt;: Defines a footer for a document or section
-
-
-</pre>
-
- <a href="#top">back to Top</a>
-
-<!-- Workshop-->
-<h2 id="Workshop">MY Workshop
-</h2>
-    <pre> 
--workshop01 :rabiit
--workshop02 :Login
-
-</pre>
-
- <a href="#top">back to Top</a>
-<hr>
-<div class="text-center"> 
-<a href="https://www.w3schools.com/html/">Learn more about HTML</a>
-<p>&copy; 2024 HTML Tutorial by Sahapat Butsayakul</p>
-</div>
 </body>
+</html>

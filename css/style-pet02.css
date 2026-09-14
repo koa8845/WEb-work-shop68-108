@@ -18,6 +18,7 @@
   --header-bg-color: rgb(76, 235, 227);
   --light-bg-color: white;
   --footer-bg-color: rgb(50, 247, 237);
+  --gary-bg-color: rgb(175, 169, 169);
   /* สีเงา */
   --header-shadow: 0 4px 10px rgb(151, 151, 151);
   --card-shadow: 0 3px 10px rgb(151, 151, 151);
@@ -71,13 +72,12 @@ body {
   color: var(--sub-text-color);
 }
 /* Navbar */
-nav {
+.catagory-nav {
   text-align: center;
   padding: 1rem;
 }
 
-nav a {
-  text-decoration: none;
+.catagory-nav label {
 
   color: var(--nav-text-color);
   background: rgb(236, 235, 235);
@@ -97,20 +97,36 @@ nav a {
   user-select: none;
 }
 
-nav a:hover {
+.catagory-nav label:hover {
   transform: translateY(-5px);
   box-shadow: gray;
 }
 
-nav a.active {
-  color: var(--light-text-color);
-  background-color: var(--seconary-color);
+.filter-radio {
+  /* display: none; */
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
 }
+#fiter-all:checke  .catagory-nav label[for="filter-all"],
 
+
+
+
+
+
+
+
+{
+  background-color: var(--seconary-color);
+  color: var(--light-text-color);
+}
 /* Main */
 
 .page-title {
-  text-align: center; /*ทำให้textอยู่ตรงกลาง*/
+  text-align: center; /ทำให้textอยู่ตรงกลาง/
 }
 
 .pet-grid {
@@ -196,67 +212,91 @@ nav a.active {
 
 /* สีพื้นหลังและสีตัวอักษรหัวข้อของการ์ดแต่ละสี */
 .info-blue {
-<<<<<<< HEAD
   background-color: #e0f2fe; 
-=======
-  background-color: #e0f2fe;
->>>>>>> 99f6f44 (W13)
 }
 .info-blue h3 {
   color: #1e40af;
 }
 
 .info-purple {
-<<<<<<< HEAD
   background-color: #f3e8ff; 
-=======
-  background-color: #f3e8ff;
->>>>>>> 99f6f44 (W13)
 }
 .info-purple h3 {
   color: #6b21a8;
 }
 
 .info-green {
-<<<<<<< HEAD
   background-color: #dcfce7; 
-=======
-  background-color: #dcfce7;
->>>>>>> 99f6f44 (W13)
 }
 .info-green h3 {
   color: #166534;
 }
 
 .info-orange {
-<<<<<<< HEAD
   background-color: #ffedd5; 
-=======
-  background-color: #ffedd5;
->>>>>>> 99f6f44 (W13)
 }
 .info-orange h3 {
   color: #9a3412;
 }
 
-<<<<<<< HEAD
+/* เรียนรู้การสร้างฟอร์ม */
+.Form-section {
+  background-color: var(--light-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 0.75rem;
+  padding: 2.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.Form-section h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+.Form-section p {
+  text-align: center;
+  color: var(--sub-text-color);
+}
+.Form-section fieldset {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+}
+.Form-section legend {
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+.radio-item {
+}
+.radio-item input {
+  accent-color: blue
+  ;
+}
+.radio-item label {
+  background-color: var(--gary-bg-color);
+  color: var(--nav-text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.radio-option {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.radio-item input:checked + lebel {
+  background-color: rgb(61, 61, 212);
+  color: white
+  
+  ;
+}
 
 /* Footer */
-footer {
+.footer {
   padding-block: 1.25rem;
   background-color: var(--footer-bg-color);
   text-align: center;
   color: var(--light-text-color);
   margin-top: 1.5rem;
-}
-
-=======
->>>>>>> 99f6f44 (W13)
-/* Footer */
-footer {
-  padding-block: 1.25rem;
-  background-color: var(--footer-bg-color);
-  text-align: center;
-  color: var(--light-text-color);
-  margin-top: 1.5rem;
-}

@@ -126,7 +126,7 @@ body {
 /* Main */
 
 .page-title {
-  text-align: center; /ทำให้textอยู่ตรงกลาง/
+  text-align: center; /*ทำให้textอยู่ตรงกลาง*/
 }
 
 .pet-grid {
@@ -147,7 +147,7 @@ body {
   border-radius: 0.75rem;
   overflow: hidden;
 
-  transition: tranform 0.25s;
+  transition: transform 0.25s;
 }
 
 .pet-card:hover {
@@ -173,6 +173,7 @@ body {
   color: var(--sub-text-color);
 }
 
+/* card แนะนำ */
 .info-section {
   background-color: var(--light-bg-color);
   box-shadow: var(--card-shadow);
@@ -212,91 +213,93 @@ body {
 
 /* สีพื้นหลังและสีตัวอักษรหัวข้อของการ์ดแต่ละสี */
 .info-blue {
-  background-color: #e0f2fe; 
+  background-color: #e0f2fe;
 }
 .info-blue h3 {
   color: #1e40af;
 }
 
 .info-purple {
-  background-color: #f3e8ff; 
+  background-color: #f3e8ff;
 }
 .info-purple h3 {
   color: #6b21a8;
 }
 
 .info-green {
-  background-color: #dcfce7; 
+  background-color: #dcfce7;
 }
 .info-green h3 {
   color: #166534;
 }
 
 .info-orange {
-  background-color: #ffedd5; 
+  background-color: #ffedd5;
 }
 .info-orange h3 {
   color: #9a3412;
 }
 
-/* เรียนรู้การสร้างฟอร์ม */
-.Form-section {
+/* Learning Form เรียนทำปุ่มแบบเลือก */
+.form-section {
   background-color: var(--light-bg-color);
   box-shadow: var(--card-shadow);
   border-radius: 0.75rem;
   padding: 2.5rem 2rem;
   margin-top: 2rem;
 }
-
-.Form-section h2 {
+.form-section h2 {
   text-align: center;
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5 rem;
 }
-.Form-section p {
+
+.form-section p {
   text-align: center;
   color: var(--sub-text-color);
 }
-.Form-section fieldset {
+
+.form-section fieldset {
   padding: 1.5rem;
   border: 1px solid var(--border-color);
   border-radius: 0.75rem;
 }
-.Form-section legend {
+.form-section legend {
   color: var(--primary-color);
   padding: 0 0.5rem;
   font-weight: bold;
 }
+
+.radio-option {
+  display: flex;
+  justify-content: center; /*คำสั่งเอาitemเข้ากลาง */
+  gap: 0.75rem;
+
+  flex-wrap: wrap;
+}
 .radio-item {
 }
 .radio-item input {
-  accent-color: blue
-  ;
+  accent-color: var(--primary-dark-color);
 }
 .radio-item label {
-  background-color: var(--gary-bg-color);
-  color: var(--nav-text-color);
+  background-color: var(--grey-bg-color);
+  color: var(--dark-text-color);
+
   padding: 0.5rem 1rem;
   border-radius: 1rem;
+
   cursor: pointer;
 }
-.radio-option {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+.radio-item input:checked + label {
+  color: var(--light-text-color);
+  background-color: var(--primary-color);
 }
-.radio-item input:checked + lebel {
-  background-color: rgb(61, 61, 212);
-  color: white
-  
-  ;
-}
-
 /* Footer */
-.footer {
+footer {
   padding-block: 1.25rem;
   background-color: var(--footer-bg-color);
   text-align: center;
   color: var(--light-text-color);
   margin-top: 1.5rem;
+}

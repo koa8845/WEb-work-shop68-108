@@ -8,16 +8,18 @@
   /* สีหลักเว็บไซต์ */
   --primary-color: rgb(0, 4, 240);
   --primary-dark-color: rgb(5, 63, 189);
-  --seconary-color: rgb(19, 177, 240);
+  --seconary-color: rgb(82, 196, 241);
 
   /* สีข้อความ */
   --sub-text-color: grey;
   --nav-text-color: rgb(39, 38, 38);
   --light-text-color: white;
+  --red-text-color: red;
+  --green-text-color: green;
   /* สีพื้นหลัง */
   --header-bg-color: rgb(76, 235, 227);
   --light-bg-color: white;
-  --footer-bg-color: rgb(50, 247, 237);
+  --footer-bg-color: rgb(126, 238, 232);
   --gary-bg-color: rgb(175, 169, 169);
   /* สีเงา */
   --header-shadow: 0 4px 10px rgb(151, 151, 151);
@@ -42,8 +44,9 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
+  width: 90%;
 }
 
 /* header */
@@ -78,7 +81,6 @@ body {
 }
 
 .catagory-nav label {
-
   color: var(--nav-text-color);
   background: rgb(236, 235, 235);
   padding: 0.65rem 1.2rem;
@@ -110,19 +112,47 @@ body {
   height: 1px;
   clip-path: inset(50%);
 }
-#fiter-all:checke  .catagory-nav label[for="filter-all"],
-
-
-
-
-
-
-
-
-{
-  background-color: var(--seconary-color);
+#filter-all:checked ~ .catagory-nav label[for="filter-all"],
+#filter-dog:checked ~ .catagory-nav label[for="filter-dog"],
+#filter-cat:checked ~ .catagory-nav label[for="filter-cat"],
+#filter-bird:checked ~ .catagory-nav label[for="filter-bird"],
+#filter-fish:checked ~ .catagory-nav label[for="filter-fish"],
+#filter-small-pet:checked ~ .catagory-nav label[for="filter-small-pet"] {
+  background-color: var(--primary-color);
   color: var(--light-text-color);
 }
+
+/* ซ่อน แสดงหัวข้อหมวดหมู่ */
+.catagory-title {
+  display: none;
+}
+
+/* ตั้งค่าให้แสดงเฉพาะหมวดหมู่ที่ตรงกับปุ่มที่ถูกเลือก */
+#filter-all:checked ~ main .title-all,
+#filter-dog:checked ~ main .title-dog,
+#filter-cat:checked ~ main .title-cat,
+#filter-bird:checked ~ main .title-bird,
+#filter-fish:checked ~ main .title-fish,
+#filter-small-pet:checked ~ main .title-small-pet {
+  display: inline;
+}
+
+#filter-dog:checked ~ main .pet-card,
+#filter-cat:checked ~ main .pet-card,
+#filter-bird:checked ~ main .pet-card,
+#filter-fish:checked ~ main .pet-card,
+#filter-small-pet:checked ~ main .pet-card {
+  display: none;
+}
+
+#filter-dog:checked ~ main .show-dog,
+#filter-cat:checked ~ main .show-cat,
+#filter-bird:checked ~ main .show-bird,
+#filter-fish:checked ~ main .show-fish,
+#filter-small-pet:checked ~ main .show-smallpet {
+  display: block;
+}
+
 /* Main */
 
 .page-title {
@@ -131,9 +161,10 @@ body {
 
 .pet-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-
+  /* grid-template-columns: repeat(4, 1fr); */
+grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 1.5rem;
+  padding: 0 50px;
 }
 
 .pet-title {
@@ -172,7 +203,71 @@ body {
 .breed {
   color: var(--sub-text-color);
 }
+/* <!--รายละเอียดเพิ่มเติม--> */
+.pet-info {
+  list-style: none;
+}
 
+.info-lifespan {
+  color: var(--primary-color);
+}
+
+.info-size {
+  color: var(--red-text-color);
+}
+
+.info-temperament {
+  color: var(--green-text-color);
+}
+.pet-details summary {
+  list-style: none;
+}
+.pet-details-body {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pet-btn {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--light-text-color);
+  cursor: pointer;
+  margin-top:;
+  transition: transform 0.2s;
+}
+
+.pet-btn:hover {
+  background-color: var(--primary-dark-color);
+  transform: translatey(-5px);
+}
+.hide-detail {
+  display: none;
+}
+
+.pet-details[open] .show-detail {
+  display: none;
+}
+.pet-details[open] .hide-detail {
+  display: inline;
+}
+
+.pet-details-body {
+  border-top: 1px solid brown;
+  padding-top: 1rem;
+  animation: appear 2s ease-out;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translatey(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(0px);
+  }
+}
 /* card แนะนำ */
 .info-section {
   background-color: var(--light-bg-color);
@@ -191,7 +286,9 @@ body {
 /* จัดการ Grid ให้เรียง 4 คอลัมน์ */
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: 1.5rem;
 }
 
@@ -238,6 +335,58 @@ body {
 }
 .info-orange h3 {
   color: #9a3412;
+}
+
+/*Table*/
+.pet-table {
+  border: 1px solid var(--red-text-color);
+  border-collapse: collapse;
+  width: 100%;
+  background-color: aqua;
+  margin-top: 2rem;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+}
+.pet-table th,
+.pet-table td
+{
+  border: 1px solid var(--light-text-color);
+  padding: 1rem;
+  vertical-align: top;
+  overflow-wrap: break-word;
+ 
+}
+.pet-table caption {
+  padding: 0.75rem;
+  font-weight: bold;
+  caption-side: top;
+}
+.pet-table thead th{
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  white-space: nowrap;
+}
+.pet-table tbody th{
+  background-color: var(--seconary-color);
+    color: var(--light-text-color);
+    text-align: left;
+}
+.pet-table tbody td{
+  background-color:var(--seconary-color);
+    color: var(--light-text-color);
+}
+.pet-table th:nth-child(1) {width: 300px;}
+.pet-table th:nth-child(2) {width: 300px;}
+.pet-table th:nth-child(3) {width: 150px;}
+.pet-table th:nth-child(4) {width: 300px;}
+.pet-table th:nth-child(5) {width: 300px;}
+
+.pet-table tbody tr:nth-child(even) {
+  background-color: gray;
+
+}
+.pet-table tbody tr:hover {
+  background-color: rgb(180, 176, 176);
 }
 
 /* Learning Form เรียนทำปุ่มแบบเลือก */
@@ -302,4 +451,23 @@ footer {
   text-align: center;
   color: var(--light-text-color);
   margin-top: 1.5rem;
+}
+
+/* Reponsive */
+@media (max-width: 992px) {
+  .pet-grid {
+    /* grid-template-columns: repeat(2, 1fr);
+    padding: 0 50px; */
+  }
+}
+@media (max-width: 768px) {
+  .pet-grid {
+    /* grid-template-columns: 1fr;
+    margin: 0 50px;
+  } */
+  .catagory-nav lebel {
+    display: block;
+    margin: 0.5 1rem;
+    border-radius: 10px;
+  }
 }
